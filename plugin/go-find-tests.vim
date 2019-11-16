@@ -14,6 +14,11 @@ function! GoFindTests()
 
 	" TODO: should try to jump straight to first item without having to
 	" open quickfix list
+	if len(positions) == 0
+		echo "No tests found"
+		return
+	endif
+
 	call setqflist(positions)
 	execute 'botright copen'
 	redraw!
