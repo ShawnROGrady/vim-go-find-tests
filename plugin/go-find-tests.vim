@@ -13,21 +13,22 @@ function! GoFindTests()
 	endif
 
 	let positions = []
+	" set items for quickfix list
 	for outLine in output 
 		let pos = split(outLine, ':')
 		let qfItem={"filename": pos[1], "lnum": pos[2], "col": pos[3], "text": pos[0]}
 		call add(positions, qfItem)
 	endfor
 
-	" TODO: should try to jump straight to first item without having to
-	" open quickfix list
 	if len(positions) == 0
 		echo "No tests found"
 		return
 	endif
 
+	" set quickfix list
 	call setqflist(positions)
-	execute 'botright copen'
+	" jump to first item
+	execute 'cc' 
 	redraw!
 endfunction
 
