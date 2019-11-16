@@ -5,6 +5,13 @@ function! GoFindTests()
 
 	let args="./".curFile." ".curLine." ".curCol
 	let output=systemlist('go-find-tests -print-positions'." ".args)
+	if v:shell_error
+		" TODO: should populate qflist to help resolve errors finding
+		" covering tests
+		echo output
+		return
+	endif
+
 	let positions = []
 	for outLine in output 
 		let pos = split(outLine, ':')
