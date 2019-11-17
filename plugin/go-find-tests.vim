@@ -44,4 +44,23 @@ function! GoFindTests(cmdArgs)
 	redraw!
 endfunction
 
+function GoCoveringTests(cmdArgs)
+	let curLine=line('.')
+	let curCol=col('.')
+	let curFile=@%
+	let posArgs=["./".curFile, curLine, curCol]
+
+	let output=system('go-find-tests'." ".a:cmdArgs." ".join(posArgs," "))
+	if v:shell_error
+		" TODO: should populate qflist to help resolve errors finding
+		" covering tests
+		echo output
+		return
+	endif 
+
+	echo output
+	return
+endfunction
+
 command! -bang -nargs=* GoFindTests call GoFindTests(<q-args>)
+command! -bang -nargs=* GoCoveringTests call GoCoveringTests(<q-args>)

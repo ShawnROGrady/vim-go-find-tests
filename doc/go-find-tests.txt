@@ -43,5 +43,14 @@ the version of the binary you've installed matches the requirement.
         parsing of the output. For a full list of available [args] run
         'go-find-tests -h'
 
+                                                            *:GoCoveringTests*
+:GoCoveringTests [args]                                                         
+        Prints the names of the tests covering the position under the cursor.
+        Similar to just calling `:!go-find-tests` but handles setting
+        positional args
+        
+        All [args] are passed directly to the go-find-tests tool. For a full
+        list of available [args] run 'go-find-tests -h'.
+
 
  vim: ft=help tw=78 sw=4 ts=8 et norl
