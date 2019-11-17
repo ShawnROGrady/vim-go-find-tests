@@ -1,4 +1,4 @@
-function! GoFindTests(cmdArgs)
+function! gofindtests#Jump(cmdArgs)
 	" validate args
 	for cmdArg in split(a:cmdArgs)
 		if cmdArg =~ "json" || cmdArg =~ "line-fmt"
@@ -44,7 +44,7 @@ function! GoFindTests(cmdArgs)
 	redraw!
 endfunction
 
-function GoCoveringTests(cmdArgs)
+function gofindtests#List(cmdArgs)
 	let curLine=line('.')
 	let curCol=col('.')
 	let curFile=@%
@@ -61,6 +61,3 @@ function GoCoveringTests(cmdArgs)
 	echo output
 	return
 endfunction
-
-command! -bang -nargs=* GoFindTests call GoFindTests(<q-args>)
-command! -bang -nargs=* GoCoveringTests call GoCoveringTests(<q-args>)

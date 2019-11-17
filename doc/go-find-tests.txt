@@ -19,8 +19,9 @@ made prior to v1.0.0
 ==============================================================================
 2. REQUIREMENTS                                           *go-find-tests-reqs*
 
-Have the go-find-tests binary (https://github.com/ShawnROGrady/go-find-tests)
-installed.
+i) Install the go-find-tests binary:
+    - https://github.com/ShawnROGrady/go-find-tests
+ii) Make sure not in compatible mode
 
 NOTE: the go-find-tests tool is currently in beta, partially because I want to
 ensure the API is friendly to developing editor plugins like this. As such
