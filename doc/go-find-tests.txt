@@ -1,0 +1,43 @@
+*go-find-tests.txt* Plugin to find go test functions
+
+==============================================================================
+CONTENTS
+    
+    1. Intro             |go-find-tests-intro|
+    2. Requirements      |go-find-tests-reqs|
+    3. Commands          |go-find-tests-cmds|
+
+==============================================================================
+1. INTRO                                                 *go-find-tests-intro*
+
+Provides utilities for finding and navigating test functions for the go
+programming language. 
+
+NOTE: this plugin is still in beta, so backwards incompatible changes may be
+made prior to v1.0.0
+
+==============================================================================
+2. REQUIREMENTS                                           *go-find-tests-reqs*
+
+Have the go-find-tests binary (https://github.com/ShawnROGrady/go-find-tests)
+installed.
+
+NOTE: the go-find-tests tool is currently in beta, partially because I want to
+ensure the API is friendly to developing editor plugins like this. As such
+backwards incompatible changes may be made prior to v1.0.0 so make sure
+the version of the binary you've installed matches the requirement.
+
+==============================================================================
+3. COMMANDS                                               *go-find-tests-cmds*
+
+                                                                *:GoFindTests*
+:GoFindTests                                                                    
+        Populates quickfix list with tests covering the block of code under
+        the cursor. Jumps to first covering test if any found.
+        Next test can be accessed with `:cn`, previous test can be reached
+        with `:cp`. See `:quickfix`  for more information about navigating
+        the quickfix list
+
+
+
+ vim: ft=help tw=78 sw=4 ts=8 et norl
