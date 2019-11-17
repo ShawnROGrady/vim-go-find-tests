@@ -31,13 +31,17 @@ the version of the binary you've installed matches the requirement.
 3. COMMANDS                                               *go-find-tests-cmds*
 
                                                                 *:GoFindTests*
-:GoFindTests                                                                    
+:GoFindTests [args]                                                                    
         Populates quickfix list with tests covering the block of code under
         the cursor. Jumps to first covering test if any found.
         Next test can be accessed with `:cn`, previous test can be reached
         with `:cp`. See `:quickfix`  for more information about navigating
         the quickfix list
-
+        
+        All [args] are passed directly to the go-find-tests tool EXCEPT
+        '-json' and '-line-fmt regexp' since these would interfere with the
+        parsing of the output. For a full list of available [args] run
+        'go-find-tests -h'
 
 
  vim: ft=help tw=78 sw=4 ts=8 et norl
