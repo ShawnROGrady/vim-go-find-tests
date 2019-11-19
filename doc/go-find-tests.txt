@@ -21,6 +21,7 @@ made prior to v1.0.0
 
 i) Install the go-find-tests binary:
     - https://github.com/ShawnROGrady/go-find-tests
+    - requires v0.2.0 or later
 ii) Make sure not in compatible mode
 
 NOTE: the go-find-tests tool is currently in beta, partially because I want to
