@@ -48,9 +48,9 @@ function gofindtests#List(cmdArgs)
 	let curLine=line('.')
 	let curCol=col('.')
 	let curFile=@%
-	let posArgs=["./".curFile, curLine, curCol]
+	let posArg="./".curFile.":".curLine.".".curCol
 
-	let output=system('go-find-tests'." ".a:cmdArgs." ".join(posArgs," "))
+	let output=system('go-find-tests'." ".a:cmdArgs." ".posArg)
 	if v:shell_error
 		" TODO: should populate qflist to help resolve errors finding
 		" covering tests
