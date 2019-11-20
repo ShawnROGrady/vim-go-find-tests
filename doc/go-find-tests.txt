@@ -6,6 +6,7 @@ CONTENTS
     1. Intro             |go-find-tests-intro|
     2. Requirements      |go-find-tests-reqs|
     3. Commands          |go-find-tests-cmds|
+    4. Credits           |go-find-tests-credits|
 
 ==============================================================================
 1. INTRO                                                 *go-find-tests-intro*
@@ -54,5 +55,10 @@ the version of the binary you've installed matches the requirement.
         All [args] are passed directly to the go-find-tests tool. For a full
         list of available [args] run 'go-find-tests -h'.
 
+==============================================================================
+4. CREDITS                                             *go-find-tests-credits*
+
+* Author and contributors of the vim-go plugin for providing an excellent
+  reference for writing a vim plugin for the go language
 
  vim: ft=help tw=78 sw=4 ts=8 et norl
