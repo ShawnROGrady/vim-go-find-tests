@@ -16,7 +16,7 @@ function! gofindtests#Jump(cmdArgs)
 
 	let posArg="./".curFile.":".curLine.".".curCol
 
-	let output=systemlist('go-find-tests -print-positions'." ".a:cmdArgs." ".posArg)
+	let output=systemlist('go-find-tests -print-positions -line-fmt %t:%f:%l:%c'." ".a:cmdArgs." ".posArg)
 	if v:shell_error
 		" TODO: should populate qflist to help resolve errors finding
 		" covering tests
