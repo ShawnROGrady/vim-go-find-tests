@@ -4,7 +4,7 @@ function! gofindtests#Jump(cmdArgs)
 		if cmdArg =~ "json" || cmdArg =~ "line-fmt"
 			" TODO: I dislike having this check, ideally there
 			" should be exactly 1 ouput fmt which is useful for
-			" comman-line usage but is plugin friendly
+			" command-line usage but is plugin friendly
 			echo "Formatting options not allowed"
 			return
 		endif
